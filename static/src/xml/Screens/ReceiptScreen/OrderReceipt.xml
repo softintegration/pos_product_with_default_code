@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="OrderLinesReceipt" t-inherit="point_of_sale.OrderLinesReceipt" t-inherit-mode="extension" owl="1">
+        <xpath expr="//t[@t-esc='line.product_name_wrapped[0]']" position="before">
+            [<t t-esc="line.product_default_code" />]
+        </xpath>
+        <xpath expr="//div[@t-esc='line.product_name_wrapped[0]']" position="before">
+            [<t t-esc="line.product_default_code" />]
+        </xpath>
+    </t>
+</templates>
